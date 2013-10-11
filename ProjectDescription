@@ -1,0 +1,50 @@
+Requirements:
+- Members
+* Diana Roberts
+   * drober23@uic.edu
+   * 630-484-7391
+* Christopher Thomas
+   * cthoma32@uic.edu
+   * 312-515-5703
+* Raul Luna, Jr
+   * jluna8@uic.edu
+   * (815) 271-2788
+-       Project Description ~ 2 pages
+* Located below
+-       Goal of Project
+* To help Amateurs ( the weekend golfer ) to shoot lower scores by:
+   * Course Mapping
+   * Course Setup ( Right set of tees to be playing on )
+   * Giving the user the option to access as much information as they see fit
+
+
+-       Tools / Libraries ( Networking, Databases, Graphics )
+* Qt Creator
+* Doxygen
+* Lucidchart
+* Possible database if needed (SQL/MS Access)
+-       Workload for each member
+-       Diagrams / Sketches
+o   Lucidchart will create diagrams and/or sketches when needed
+
+
+Idea:
+-       Mobile Golf App ( Virtual Caddy )
+* Keep up to date of your handicap
+   * Will need the course slope and rating
+   * App will have to keep database of previous scores
+* Keep track of your current set of clubs
+   * Lofts
+   * Lies
+   * Shafts
+   * Grips
+   * Distance ( yards / meters ) of each club
+* Keep track of tendencies ( ie. slicing, hooking, missed putts, etc )
+* Keep track of paces walked hence calories burned
+* News feed on different tours where user specify ( PGA Tour, Web.com Tour, LPGA Tour, Golf Channel, etc. )
+* Nearby course located around your locations ( ex. 15, 25, 50+ miles & may have to use GPS capabilities )
+* Pro Tips for each hole on each course
+   * According to your handicap, lets you know how you should play this hole ( shot-link tutorial )
+   * Could possibly change this when user inputs a target score
+* Basic Rules of the Game and Golf Etiquette
+* Possible GPS capabilities for yardage ( if possible )
