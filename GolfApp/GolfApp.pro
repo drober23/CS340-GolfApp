@@ -23,7 +23,8 @@ SOURCES += main.cpp\
     social.cpp \
     handicap.cpp \
     profile.cpp \
-    hole.cpp
+    hole.cpp \
+    login.cpp
 
 HEADERS  += mainwindow.h \
     newsfeed.h \
@@ -32,7 +33,8 @@ HEADERS  += mainwindow.h \
     social.h \
     handicap.h \
     profile.h \
-    hole.h
+    hole.h \
+    login.h
 
 FORMS    += mainwindow.ui \
     newsfeed.ui \
@@ -41,4 +43,5 @@ FORMS    += mainwindow.ui \
     social.ui \
     handicap.ui \
     profile.ui \
-    hole.ui
+    hole.ui \
+    login.ui
