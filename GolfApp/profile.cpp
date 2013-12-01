@@ -18,3 +18,8 @@ profile::~profile()
 {
     delete ui;
 }
+
+void profile::on_backButton_clicked()
+{
+    this->setHidden(true);
+}

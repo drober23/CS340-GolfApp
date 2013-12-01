@@ -15,6 +15,10 @@ public:
     explicit profile(QWidget *parent = 0);
     ~profile();
 
+private slots:
+
+    void on_backButton_clicked();
+
 private:
     Ui::profile *ui;
 };

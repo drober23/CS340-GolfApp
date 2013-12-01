@@ -10,6 +10,7 @@
 #define UI_NEWSFEED_H
 
 #include <QtCore/QVariant>
+#include <QtWebKitWidgets/QWebView>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
@@ -29,6 +30,7 @@ public:
     QPushButton *PGATour;
     QPushButton *LPGATour;
     QPushButton *ESPN;
+    QWebView *webView;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -36,7 +38,7 @@ public:
     {
         if (newsfeed->objectName().isEmpty())
             newsfeed->setObjectName(QStringLiteral("newsfeed"));
-        newsfeed->resize(800, 600);
+        newsfeed->resize(350, 450);
         centralwidget = new QWidget(newsfeed);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         PGATour = new QPushButton(centralwidget);
@@ -48,10 +50,14 @@ public:
         ESPN = new QPushButton(centralwidget);
         ESPN->setObjectName(QStringLiteral("ESPN"));
         ESPN->setGeometry(QRect(230, 0, 115, 50));
+        webView = new QWebView(centralwidget);
+        webView->setObjectName(QStringLiteral("webView"));
+        webView->setGeometry(QRect(20, 90, 300, 200));
+        webView->setUrl(QUrl(QStringLiteral("about:blank")));
         newsfeed->setCentralWidget(centralwidget);
         menubar = new QMenuBar(newsfeed);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 22));
+        menubar->setGeometry(QRect(0, 0, 350, 22));
         newsfeed->setMenuBar(menubar);
         statusbar = new QStatusBar(newsfeed);
         statusbar->setObjectName(QStringLiteral("statusbar"));

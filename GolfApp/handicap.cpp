@@ -12,3 +12,8 @@ handicap::~handicap()
 {
     delete ui;
 }
+
+void handicap::on_backButton_clicked()
+{
+    this->setHidden(true);
+}

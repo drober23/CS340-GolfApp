@@ -15,6 +15,10 @@ public:
     explicit handicap(QWidget *parent = 0);
     ~handicap();
 
+private slots:
+
+    void on_backButton_clicked();
+
 private:
     Ui::handicap *ui;
 };

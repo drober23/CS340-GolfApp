@@ -15,6 +15,10 @@ public:
     explicit rules(QWidget *parent = 0);
     ~rules();
 
+private slots:
+
+    void on_backButton_clicked();
+
 private:
     Ui::rules *ui;
 };

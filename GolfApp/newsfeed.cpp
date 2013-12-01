@@ -34,3 +34,8 @@ void newsfeed::on_ESPN_clicked()
     ui->webView->load(QUrl("http://m.espn.go.com/golf/"));
 
 }
+
+void newsfeed::on_backButton_clicked()
+{
+    this->setHidden(true);
+}

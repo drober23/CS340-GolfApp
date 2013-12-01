@@ -35,3 +35,8 @@ void social::on_SearchButton_clicked()
     lastName = ui->LastNameSearch->text();
     cout << lastName << endl;
 }
+
+void social::on_backButton_clicked()
+{
+    this->setHidden(true);
+}

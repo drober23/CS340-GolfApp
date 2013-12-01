@@ -88,3 +88,8 @@ void track::on_StartRound_clicked()
     // This will disappread the mainwindow
     hide();
 }
+
+void track::on_backButton_clicked()
+{
+    this->setHidden(true);
+}

@@ -23,6 +23,8 @@ private slots:
 
     void on_ESPN_clicked();
 
+    void on_backButton_clicked();
+
 private:
     Ui::newsfeed *ui;
 };

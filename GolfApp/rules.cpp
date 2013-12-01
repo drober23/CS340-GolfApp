@@ -28,3 +28,8 @@ rules::~rules()
 {
     delete ui;
 }
+
+void rules::on_backButton_clicked()
+{
+    this->setHidden(true);
+}

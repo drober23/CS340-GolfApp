@@ -10,6 +10,7 @@
 #define UI_WEBPAGE_H
 
 #include <QtCore/QVariant>
+#include <QtWebKitWidgets/QWebView>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
@@ -17,7 +18,6 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -26,9 +26,9 @@ class Ui_webpage
 {
 public:
     QWidget *centralwidget;
+    QWebView *webView;
     QMenuBar *menubar;
     QStatusBar *statusbar;
-    QToolBar *toolBar;
 
     void setupUi(QMainWindow *webpage)
     {
@@ -37,6 +37,10 @@ public:
         webpage->resize(350, 450);
         centralwidget = new QWidget(webpage);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
+        webView = new QWebView(centralwidget);
+        webView->setObjectName(QStringLiteral("webView"));
+        webView->setGeometry(QRect(0, 0, 350, 450));
+        webView->setUrl(QUrl(QStringLiteral("about:blank")));
         webpage->setCentralWidget(centralwidget);
         menubar = new QMenuBar(webpage);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -45,9 +49,6 @@ public:
         statusbar = new QStatusBar(webpage);
         statusbar->setObjectName(QStringLiteral("statusbar"));
         webpage->setStatusBar(statusbar);
-        toolBar = new QToolBar(webpage);
-        toolBar->setObjectName(QStringLiteral("toolBar"));
-        webpage->addToolBar(Qt::TopToolBarArea, toolBar);
 
         retranslateUi(webpage);
 
@@ -57,7 +58,6 @@ public:
     void retranslateUi(QMainWindow *webpage)
     {
         webpage->setWindowTitle(QApplication::translate("webpage", "MainWindow", 0));
-        toolBar->setWindowTitle(QApplication::translate("webpage", "toolBar", 0));
     } // retranslateUi
 
 };

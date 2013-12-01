@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "ui_mainwindow.h"
 #include "newsfeed.h"
 #include "rules.h"
 #include "track.h"
@@ -6,7 +7,6 @@
 #include "handicap.h"
 #include "social.h"
 #include "hole.h"
-#include "ui_mainwindow.h"
 
 /*!
  * \brief MainWindow::MainWindow
@@ -36,8 +36,7 @@ void MainWindow::on_Profile_Button_clicked()
     QWidget *profile_window = new profile();
     profile_window->show();
     // This will disappread the mainwindow
-    hide();
-
+    this->isHidden();
 }
 
 void MainWindow::on_Handicap_Button_clicked()
@@ -45,7 +44,7 @@ void MainWindow::on_Handicap_Button_clicked()
     QWidget *handicap_window = new handicap();
     handicap_window->show();
     // This will disappread the mainwindow
-    hide();
+    this->isHidden();
 }
 
 /*!
@@ -58,7 +57,7 @@ void MainWindow::on_NewsFeed_Button_clicked()
     QWidget *newsfeed_window = new newsfeed();
     newsfeed_window->show();
     // This will disappread the mainwindow
-    hide();
+    this->isHidden();
 }
 
 void MainWindow::on_Track_Button_clicked()
@@ -66,7 +65,7 @@ void MainWindow::on_Track_Button_clicked()
     QWidget *track_window = new track();
     track_window->show();
     // This will disappread the mainwindow
-    hide();
+    this->isHidden();
 }
 
 void MainWindow::on_Rules_Button_clicked()
@@ -74,7 +73,7 @@ void MainWindow::on_Rules_Button_clicked()
     QWidget *rules_window = new rules();
     rules_window->show();
     // This will disappread the mainwindow
-    hide();
+    this->isHidden();
 }
 
 void MainWindow::on_Social_Button_clicked()
@@ -82,7 +81,7 @@ void MainWindow::on_Social_Button_clicked()
     QWidget *social_window = new social();
     social_window->show();
     // This will disappread the mainwindow
-    hide();
+    this->isHidden();
 }
 
 /*!
