@@ -19,6 +19,10 @@ private slots:
 
     void on_PGATour_clicked();
 
+    void on_LPGATour_clicked();
+
+    void on_ESPN_clicked();
+
 private:
     Ui::newsfeed *ui;
 };

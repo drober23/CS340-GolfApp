@@ -1,5 +1,4 @@
 #include "newsfeed.h"
-#include "web.h"
 #include "ui_newsfeed.h"
 
 newsfeed::newsfeed(QWidget *parent) :
@@ -22,8 +21,16 @@ newsfeed::~newsfeed()
 
 void newsfeed::on_PGATour_clicked()
 {
-    QWidget *webPage_window = new web();
-    webPage_window->show();
-    // This will disappread the newsfeed window
-    hide();
+    ui->webView->load(QUrl("http://mobile.pgatour.com/s/2746/Home?platform=webapp"));
+}
+
+void newsfeed::on_LPGATour_clicked()
+{
+    ui->webView->load(QUrl("http://m.lpga.com/s/10364/Home?platform=webapp&pType=home"));
+}
+
+void newsfeed::on_ESPN_clicked()
+{
+    ui->webView->load(QUrl("http://m.espn.go.com/golf/"));
+
 }
