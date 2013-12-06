@@ -26,23 +26,20 @@ social::~social()
  */
 void social::on_SearchButton_clicked()
 {
-    QTextStream cin(stdin);
-    QTextStream cout(stdout);
     QString firstName;
     QString lastName;
     QString fullName;
     QString sql1;
-    QString sql2;
 
     /*! Query to search app's members in database
      *  for displaying certain profile information
      */
     firstName = ui->FirstNameSearch->text();
-    cout << firstName << endl;
+    qDebug() << firstName << endl;
     lastName = ui->LastNameSearch->text();
-    cout << lastName << endl;
+    qDebug() << lastName << endl;
     fullName = firstName + " " + lastName;
-    cout << fullName << endl;
+    qDebug() << fullName << " " << fullName.size() << endl;
 
     /*!
      * \brief query
@@ -55,10 +52,10 @@ void social::on_SearchButton_clicked()
          */
 
         sql1 = query.value(3).toString();
-        qDebug() << query.value(3).toString();
+        qDebug() << sql1 << sql1.size();
 
-        if( fullName == sql1)
-            ui->SearchBrowser->setText("Found");
+        //if( strcmp(fullName,sql1) == 0)
+        //    ui->SearchBrowser->setText("Found");
     }
     // Error message
     ui->SearchBrowser->setText("No Records Found");

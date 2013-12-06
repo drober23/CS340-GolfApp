@@ -2,7 +2,7 @@
 #include "ui_login.h"
 #include "mainwindow.h"
 #include "database.h"
-QString username;
+int UserID;
 
 /*!
  * \brief login::login
@@ -57,11 +57,9 @@ void login::on_loginButton_clicked()
     bool ok = db.open();
     qDebug() << ok << "" << db.tables() << endl;
 
-    QTextStream cin(stdin);
-    QTextStream cout(stdout);
-    //QString username;
+    QString username;
     QString password;
-    QString sql1;
+    //QString sql1;
     QString sql2;
     QString sql3;
 
@@ -69,9 +67,9 @@ void login::on_loginButton_clicked()
      *  for displaying certain profile information
      */
     username = ui->usernameLine->text();
-    cout << username << endl;
+    qDebug() << username << endl;
     password = ui->passwordLine->text();
-    cout << password << endl;
+    qDebug() << password << endl;
 
     // If user has access with corresponding password
     QSqlQuery query ("select * from Profile");
@@ -80,8 +78,8 @@ void login::on_loginButton_clicked()
          * username and corresponding password here
          */
 
-        sql1 = query.value(0).toString();
-        qDebug() << query.value(0).toString();
+        UserID = query.value(0).toInt();
+        qDebug() << query.value(0).toInt();
         sql2 = query.value(1).toString();
         qDebug() << query.value(1).toString();
         sql3 = query.value(2).toString();
@@ -94,6 +92,7 @@ void login::on_loginButton_clicked()
                 // This will disappread the mainwindow
                 this->isHidden();
                 //cout << "bingo" << endl;
+                break;
             }
             // Error message
             else
