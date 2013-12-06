@@ -1,6 +1,8 @@
 #include "profile.h"
 #include "ui_profile.h"
 #include "mainwindow.h"
+QTextStream cin(stdin);
+QTextStream cout(stdout);
 
 profile::profile(QWidget *parent) :
     QMainWindow(parent),

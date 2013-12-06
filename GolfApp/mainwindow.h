@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QTextStream>
+#include <QDebug>
+#include <QLabel>
 
 namespace Ui {
 class MainWindow;

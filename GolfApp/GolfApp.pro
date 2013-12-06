@@ -44,8 +44,10 @@ FORMS    += mainwindow.ui \
     newsfeed.ui \
     rules.ui \
     track.ui \
-    social.ui \
     handicap.ui \
     profile.ui \
     hole.ui \
     login.ui
+
+OTHER_FILES += \
+    ../ACDB/golfapp.accdb

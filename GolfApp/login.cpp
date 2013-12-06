@@ -1,6 +1,7 @@
 #include "login.h"
 #include "ui_login.h"
 #include "mainwindow.h"
+#include "database.h"
 
 /*!
  * \brief login::login
@@ -58,6 +59,8 @@ void login::on_loginButton_clicked()
     cout << username << endl;
     password = ui->passwordLine->text();
     cout << password << endl;
+
+    database db = new database();
 
     /* Need to check user access to database with
      * username and corresponding password here

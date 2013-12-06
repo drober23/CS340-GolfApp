@@ -4,9 +4,6 @@
 #include "mainwindow.h"
 #define NumofHoles 18
 
-QTextStream cin(stdin);
-QTextStream cout(stdout);
-
 track::track(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::track)
@@ -31,6 +28,8 @@ track::~track()
 
 void track::on_confirmCourse_clicked()
 {
+    QTextStream cin(stdin);
+    QTextStream cout(stdout);
     QString courseSelected;
 
     courseSelected = ui->courseBox->currentText();
@@ -63,6 +62,8 @@ void track::on_confirmCourse_clicked()
 
 void track::on_confirmTeeBox_clicked()
 {
+    QTextStream cin(stdin);
+    QTextStream cout(stdout);
     QString teeSelected;
 
     teeSelected = ui->teeBox->currentText();
@@ -76,6 +77,8 @@ void track::on_confirmTeeBox_clicked()
 
 void track::on_StartRound_clicked()
 {
+    QTextStream cin(stdin);
+    QTextStream cout(stdout);
     QString holeSelected;
     int startingHole = 0;
 

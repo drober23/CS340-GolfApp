@@ -42,6 +42,7 @@ public:
         if (login->objectName().isEmpty())
             login->setObjectName(QStringLiteral("login"));
         login->resize(350, 450);
+        login->setAutoFillBackground(false);
         centralwidget = new QWidget(login);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         usernameLine = new QLineEdit(centralwidget);
@@ -62,6 +63,19 @@ public:
         loginButton = new QPushButton(centralwidget);
         loginButton->setObjectName(QStringLiteral("loginButton"));
         loginButton->setGeometry(QRect(100, 275, 150, 25));
+        loginButton->setStyleSheet(QLatin1String("color: rgb(0, 0, 255);\n"
+"selection-background-color: rgb(255, 255, 255);\n"
+"selection-color: rgb(0, 170, 255);\n"
+"gridline-color: rgb(255, 255, 255);\n"
+"border-left-color: rgb(255, 0, 0);\n"
+"border-bottom-color: rgb(255, 0, 0);\n"
+"border-right-color: rgb(255, 0, 0);\n"
+"border-top-color: rgb(255, 0, 0);\n"
+"border-color: rgb(255, 0, 0);\n"
+"alternate-background-color: rgb(0, 0, 94);\n"
+"background-color: rgb(0, 0, 106);\n"
+"font: 12pt \"Comic Sans MS\";\n"
+""));
         exitButton = new QPushButton(centralwidget);
         exitButton->setObjectName(QStringLiteral("exitButton"));
         exitButton->setGeometry(QRect(100, 400, 150, 25));

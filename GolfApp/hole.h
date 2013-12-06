@@ -2,7 +2,7 @@
 #define HOLE_H
 
 #include <QMainWindow>
-#include <QLabel>
+
 namespace Ui {
 class hole;
 }

@@ -3,8 +3,6 @@
 
 database::database()
 {
-    QTextStream cin(stdin);
-    QTextStream cout(stdout);
     QString sql;
 
     //qDebug() << QSqlDatabase::drivers();

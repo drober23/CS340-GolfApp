@@ -2,7 +2,6 @@
 #define HANDICAP_H
 
 #include <QMainWindow>
-#include <QLabel>
 
 namespace Ui {
 class handicap;
