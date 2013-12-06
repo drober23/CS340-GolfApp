@@ -91,7 +91,11 @@ void login::on_loginButton_clicked()
                 this->isHidden();
                 cout << "bingo" << endl;
             }
+            else
+                ui->errorLabel->setText("Please Try Again");
         }
+        else
+            ui->errorLabel->setText("Please Try Again");
     }
 }
 
