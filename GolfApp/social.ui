@@ -86,6 +86,16 @@
      </rect>
     </property>
    </widget>
+   <widget class="QTextBrowser" name="SearchBrowser">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>181</y>
+      <width>321</width>
+      <height>211</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

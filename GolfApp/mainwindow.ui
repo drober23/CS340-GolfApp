@@ -158,6 +158,9 @@
   <property name="windowTitle">
    <string>GolfApp</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPushButton" name="exitButton">
     <property name="geometry">

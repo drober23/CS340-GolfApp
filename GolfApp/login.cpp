@@ -2,6 +2,7 @@
 #include "ui_login.h"
 #include "mainwindow.h"
 #include "database.h"
+QString username;
 
 /*!
  * \brief login::login
@@ -58,10 +59,11 @@ void login::on_loginButton_clicked()
 
     QTextStream cin(stdin);
     QTextStream cout(stdout);
-    QString username;
+    //QString username;
     QString password;
-    QString sql;
+    QString sql1;
     QString sql2;
+    QString sql3;
 
     /*! Query to search app's members in database
      *  for displaying certain profile information
@@ -78,22 +80,26 @@ void login::on_loginButton_clicked()
          * username and corresponding password here
          */
 
-        sql = query.value(1).toString();
+        sql1 = query.value(0).toString();
+        qDebug() << query.value(0).toString();
+        sql2 = query.value(1).toString();
         qDebug() << query.value(1).toString();
-        sql2 = query.value(2).toString();
+        sql3 = query.value(2).toString();
         qDebug() << query.value(2).toString();
 
-        if( username == sql) {
-            if( password == sql2){
+        if( username == sql2) {
+            if( password == sql3){
                 QWidget *mainwindow = new MainWindow();
                 mainwindow->show();
                 // This will disappread the mainwindow
                 this->isHidden();
-                cout << "bingo" << endl;
+                //cout << "bingo" << endl;
             }
+            // Error message
             else
                 ui->errorLabel->setText("Please Try Again");
         }
+        // Error message
         else
             ui->errorLabel->setText("Please Try Again");
     }

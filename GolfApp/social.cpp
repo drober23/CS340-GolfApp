@@ -1,6 +1,7 @@
 #include "social.h"
 #include "ui_social.h"
 #include "mainwindow.h"
+#include "database.h"
 
 social::social(QWidget *parent) :
     QMainWindow(parent),
@@ -29,6 +30,9 @@ void social::on_SearchButton_clicked()
     QTextStream cout(stdout);
     QString firstName;
     QString lastName;
+    QString fullName;
+    QString sql1;
+    QString sql2;
 
     /*! Query to search app's members in database
      *  for displaying certain profile information
@@ -37,6 +41,27 @@ void social::on_SearchButton_clicked()
     cout << firstName << endl;
     lastName = ui->LastNameSearch->text();
     cout << lastName << endl;
+    fullName = firstName + " " + lastName;
+    cout << fullName << endl;
+
+    /*!
+     * \brief query
+     *  Searching for local members inside the application's database
+     */
+    QSqlQuery query ("select * from Profile");
+    while(query.next()) {
+        /* Need to check user access to database with
+         * username and corresponding password here
+         */
+
+        sql1 = query.value(3).toString();
+        qDebug() << query.value(3).toString();
+
+        if( fullName == sql1)
+            ui->SearchBrowser->setText("Found");
+    }
+    // Error message
+    ui->SearchBrowser->setText("No Records Found");
 }
 
 /*!
