@@ -29,15 +29,6 @@ login::login(QWidget *parent) :
     this->setFixedWidth(width);
     this->setFixedHeight(height);
     this->setWindowTitle("ALL ABOUT GOLF");
-
-    /*!
-     * \brief db
-     *  Opening database to allow access for current user
-     */
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("/Users/got_romo/Desktop/test.db");
-    bool ok = db.open();
-    qDebug() << ok << "" << db.tables() << endl;
 }
 
 login::~login()
@@ -56,11 +47,21 @@ login::~login()
  */
 void login::on_loginButton_clicked()
 {
+    /*!
+     * \brief db
+     *  Opening database to allow access for current user
+     */
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("/Users/got_romo/Desktop/golfapp.db");
+    bool ok = db.open();
+    qDebug() << ok << "" << db.tables() << endl;
+
     QTextStream cin(stdin);
     QTextStream cout(stdout);
     QString username;
     QString password;
     QString sql;
+    QString sql2;
 
     /*! Query to search app's members in database
      *  for displaying certain profile information
@@ -77,13 +78,20 @@ void login::on_loginButton_clicked()
          * username and corresponding password here
          */
 
-        sql = query.value(0).toString();
-        qDebug() << query.value(0).toString();
+        sql = query.value(1).toString();
+        qDebug() << query.value(1).toString();
+        sql2 = query.value(2).toString();
+        qDebug() << query.value(2).toString();
 
-        //QWidget *mainwindow = new MainWindow();
-        //mainwindow->show();
-        // This will disappread the mainwindow
-        //this->isHidden();
+        if( username == sql) {
+            if( password == sql2){
+                QWidget *mainwindow = new MainWindow();
+                mainwindow->show();
+                // This will disappread the mainwindow
+                this->isHidden();
+                cout << "bingo" << endl;
+            }
+        }
     }
 }
 

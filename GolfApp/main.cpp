@@ -1,6 +1,7 @@
 #include <QApplication>
 #include "login.h"
 #include "mainwindow.h"
+#include "database.h"
 
 /*!
  * \brief main
@@ -14,6 +15,7 @@ int main(int argc, char *argv[])
     QString sql;
 
     QApplication a(argc, argv);
+
     // Starting in the login window for access to application
     login w;
     w.showMaximized();
