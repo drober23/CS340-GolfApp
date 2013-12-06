@@ -31,6 +31,7 @@ public:
     QPushButton *LPGATour;
     QPushButton *ESPN;
     QWebView *webView;
+    QPushButton *backButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -52,8 +53,11 @@ public:
         ESPN->setGeometry(QRect(230, 0, 115, 50));
         webView = new QWebView(centralwidget);
         webView->setObjectName(QStringLiteral("webView"));
-        webView->setGeometry(QRect(20, 90, 300, 200));
+        webView->setGeometry(QRect(0, 50, 350, 350));
         webView->setUrl(QUrl(QStringLiteral("about:blank")));
+        backButton = new QPushButton(centralwidget);
+        backButton->setObjectName(QStringLiteral("backButton"));
+        backButton->setGeometry(QRect(100, 400, 150, 25));
         newsfeed->setCentralWidget(centralwidget);
         menubar = new QMenuBar(newsfeed);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -70,10 +74,11 @@ public:
 
     void retranslateUi(QMainWindow *newsfeed)
     {
-        newsfeed->setWindowTitle(QApplication::translate("newsfeed", "MainWindow", 0));
+        newsfeed->setWindowTitle(QApplication::translate("newsfeed", "GolfApp", 0));
         PGATour->setText(QApplication::translate("newsfeed", "PGA Tour", 0));
         LPGATour->setText(QApplication::translate("newsfeed", "LPGA Tour", 0));
         ESPN->setText(QApplication::translate("newsfeed", "ESPN", 0));
+        backButton->setText(QApplication::translate("newsfeed", "Back", 0));
     } // retranslateUi
 
 };

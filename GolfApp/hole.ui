@@ -28,7 +28,7 @@
    <widget class="QPushButton" name="previousButton">
     <property name="geometry">
      <rect>
-      <x>25</x>
+      <x>10</x>
       <y>375</y>
       <width>150</width>
       <height>25</height>
@@ -41,7 +41,7 @@
    <widget class="QPushButton" name="nextButton">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>190</x>
       <y>375</y>
       <width>150</width>
       <height>25</height>
@@ -49,6 +49,19 @@
     </property>
     <property name="text">
      <string>Next Hole</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backButton">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>400</y>
+      <width>150</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Back</string>
     </property>
    </widget>
   </widget>

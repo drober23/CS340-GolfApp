@@ -8,6 +8,8 @@
 
 QT       += core gui
 QT       += webkitwidgets
+QT       += sql
+unix:LIBS += -lpq
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -24,7 +26,8 @@ SOURCES += main.cpp\
     handicap.cpp \
     profile.cpp \
     hole.cpp \
-    login.cpp
+    login.cpp \
+    database.cpp
 
 HEADERS  += mainwindow.h \
     newsfeed.h \
@@ -34,7 +37,8 @@ HEADERS  += mainwindow.h \
     handicap.h \
     profile.h \
     hole.h \
-    login.h
+    login.h \
+    database.h
 
 FORMS    += mainwindow.ui \
     newsfeed.ui \

@@ -15,6 +15,14 @@ public:
     explicit hole(QWidget *parent = 0);
     ~hole();
 
+private slots:
+
+    void on_nextButton_clicked();
+
+    void on_previousButton_clicked();
+
+    void on_backButton_clicked();
+
 private:
     Ui::hole *ui;
 };

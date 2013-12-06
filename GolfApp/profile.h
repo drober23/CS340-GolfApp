@@ -2,6 +2,7 @@
 #define PROFILE_H
 
 #include <QMainWindow>
+#include <QLabel>
 
 namespace Ui {
 class profile;

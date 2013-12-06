@@ -1,7 +1,7 @@
 #include "track.h"
 #include "ui_track.h"
 #include "hole.h"
-#include <QTextStream>
+#include "mainwindow.h"
 #define NumofHoles 18
 
 QTextStream cin(stdin);
@@ -17,9 +17,9 @@ track::track(QWidget *parent) :
     ui->setupUi(this);
     this->setFixedWidth(width);
     this->setFixedHeight(height);
-    this->setWindowTitle("Golf App");
+    this->setWindowTitle("ALL ABOUT GOLF");
 
-    ui->courseBox->addItem(tr("Bridges of Poplar Creek"));
+    ui->courseBox->addItem(tr("Bridges of Poplar Creek Country Club"));
     ui->courseBox->addItem(tr("Oak Grove Golf Course"));
     ui->courseBox->addItem(tr("Plum Tree National Golf Club"));
 }
@@ -36,7 +36,7 @@ void track::on_confirmCourse_clicked()
     courseSelected = ui->courseBox->currentText();
     cout << courseSelected << endl;
 
-    if(courseSelected == "Bridges of Poplar Creek") {
+    if(courseSelected == "Bridges of Poplar Creek Country Club") {
         ui->teeBox->addItem(tr("Black: 71.2 / 136"));
         ui->teeBox->addItem(tr("Bridges: 70.3 / 134"));
         ui->teeBox->addItem(tr("Gold: 69.3 / 132"));
@@ -89,6 +89,13 @@ void track::on_StartRound_clicked()
     hide();
 }
 
+/*!
+ * \brief track::on_backButton_clicked
+ *  This slot will implement the "previous" window access. Unfortunately, when the user
+ *  clicks on this button, it will only close the current window and show the last
+ *  window that was opened. The application might have problems with accesssing the database
+ *  and storing queries when / where needed. Only time will tell.
+ */
 void track::on_backButton_clicked()
 {
     this->setHidden(true);
