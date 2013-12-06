@@ -30,9 +30,9 @@ private slots:
 
     void on_Handicap_Button_clicked();
 
-    void on_Social_Button_clicked();
-
     void on_Profile_Button_clicked();
+
+    void on_Social_Button_clicked();
 
 private:
     Ui::MainWindow *ui;

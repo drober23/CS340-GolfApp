@@ -5,8 +5,8 @@
 #include "track.h"
 #include "profile.h"
 #include "handicap.h"
-#include "social.h"
 #include "hole.h"
+#include "social.h"
 
 /*!
  * \brief MainWindow::MainWindow
@@ -164,6 +164,7 @@ void MainWindow::on_Social_Button_clicked()
     this->isHidden();
 }
 
+
 /*!
  * \brief MainWindow::on_exitButton_clicked
  *  Simply just our way to close/exit the Golf App.
@@ -172,3 +173,4 @@ void MainWindow::on_exitButton_clicked()
 {
     exit (EXIT_SUCCESS);
 }
+

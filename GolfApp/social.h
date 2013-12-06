@@ -16,10 +16,9 @@ public:
     ~social();
 
 private slots:
+    void on_backButton_clicked();
 
     void on_SearchButton_clicked();
-
-    void on_backButton_clicked();
 
 private:
     Ui::social *ui;

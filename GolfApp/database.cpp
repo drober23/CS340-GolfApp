@@ -7,7 +7,7 @@ database::database()
 
     //qDebug() << QSqlDatabase::drivers();
     //qDebug() << "Library Paths: " << QApplication::libraryPaths();
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");;
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     //qDebug() << db.isValid();
     db.setDatabaseName("/Users/got_romo/Desktop/test.db");
     //qDebug() << db.isValid();

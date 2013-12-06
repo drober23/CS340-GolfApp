@@ -22,23 +22,23 @@ SOURCES += main.cpp\
     newsfeed.cpp \
     rules.cpp \
     track.cpp \
-    social.cpp \
     handicap.cpp \
     profile.cpp \
     hole.cpp \
     login.cpp \
-    database.cpp
+    database.cpp \
+    social.cpp
 
 HEADERS  += mainwindow.h \
     newsfeed.h \
     rules.h \
     track.h \
-    social.h \
     handicap.h \
     profile.h \
     hole.h \
     login.h \
-    database.h
+    database.h \
+    social.h
 
 FORMS    += mainwindow.ui \
     newsfeed.ui \
@@ -47,7 +47,8 @@ FORMS    += mainwindow.ui \
     handicap.ui \
     profile.ui \
     hole.ui \
-    login.ui
+    login.ui \
+    social.ui
 
 OTHER_FILES += \
     ../ACDB/golfapp.accdb

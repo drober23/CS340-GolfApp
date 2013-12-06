@@ -14,56 +14,17 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="FirstNameSearch">
+   <widget class="QPushButton" name="backButton">
     <property name="geometry">
      <rect>
-      <x>125</x>
-      <y>50</y>
+      <x>100</x>
+      <y>400</y>
       <width>150</width>
       <height>25</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QLineEdit" name="LastNameSearch">
-    <property name="geometry">
-     <rect>
-      <x>125</x>
-      <y>100</y>
-      <width>150</width>
-      <height>25</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="FirstNameLabel">
-    <property name="geometry">
-     <rect>
-      <x>25</x>
-      <y>50</y>
-      <width>100</width>
-      <height>25</height>
-     </rect>
-    </property>
     <property name="text">
-     <string>First Name</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="LastNameLabel">
-    <property name="geometry">
-     <rect>
-      <x>25</x>
-      <y>100</y>
-      <width>100</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Last Name</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <string>Back</string>
     </property>
    </widget>
    <widget class="QPushButton" name="SearchButton">
@@ -79,17 +40,50 @@
      <string>Search</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="backButton">
+   <widget class="QLabel" name="FirstNameLabel">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>400</y>
-      <width>150</width>
+      <x>25</x>
+      <y>50</y>
+      <width>75</width>
       <height>25</height>
      </rect>
     </property>
     <property name="text">
-     <string>Back</string>
+     <string>First Name</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LastNameLabel">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>100</y>
+      <width>75</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Last Name</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="FirstNameSearch">
+    <property name="geometry">
+     <rect>
+      <x>125</x>
+      <y>50</y>
+      <width>175</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LastNameSearch">
+    <property name="geometry">
+     <rect>
+      <x>125</x>
+      <y>100</y>
+      <width>175</width>
+      <height>25</height>
+     </rect>
     </property>
    </widget>
   </widget>
