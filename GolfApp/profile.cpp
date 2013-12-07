@@ -5,6 +5,26 @@
 #include "login.h"
 extern int UserID;
 
+/*!
+ * \brief profile::profile
+ * \param parent
+ *  The profile window will show the following information of each profile:
+ *  -#Name
+ *  -#Contact Information
+ *      - Email
+ *      - Address
+ *      - Handicap Index
+ *      - Membership status
+ *  -#What's in the bag aka current clubs using (14 altogether):
+ *      - Driver
+ *      - Fairway Woods
+ *      - Hybrids
+ *      - Irons
+ *      - Wedges
+ *      - Putter
+ *  Unfortunately, we did not the implement "What's in the bag" feature in this
+ *  window. No code also is not currently displayed in this file.
+ */
 profile::profile(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::profile)

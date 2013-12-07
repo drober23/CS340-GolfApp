@@ -4,7 +4,15 @@
 #include "database.h"
 #include <cstring>
 
-
+/*!
+ * \brief social::social
+ * \param parent
+ *  The social window is able to search the database for current members with either
+ *  their first name or last name. For some reason, lines 55-68 is suppose to handle
+ *  the user query but will not display found records. I don't know if line 65 is
+ *  somehow being misused but ideally again we would like the executed query to be able
+ *  to return true when a member the user is looking for is currently in the database.
+ */
 social::social(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::social)
@@ -45,7 +53,7 @@ void social::on_SearchButton_clicked()
 
     /*!
      * \brief query
-     *  Searching for local members inside the application's database
+     *  Searching for local members inside the application's database.
      */
     QSqlQuery query ("select * from Profile");
     while(query.next()) {

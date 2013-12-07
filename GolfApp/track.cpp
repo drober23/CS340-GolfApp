@@ -39,6 +39,12 @@ track::~track()
     delete ui;
 }
 
+/*!
+ * \brief track::on_confirmCourse_clicked
+ *  This slot will confirm the user's preloaded course selection. From here,
+ *  the other drop menus are design to display only the relevent information with
+ *  regards to the course selected by the user.
+ */
 void track::on_confirmCourse_clicked()
 {
     QString courseSelected = ui->courseBox->currentText();
@@ -85,6 +91,13 @@ void track::on_confirmCourse_clicked()
     }
 }
 
+/*!
+ * \brief track::on_confirmTeeBox_clicked
+ *  This slot will confirm which tee box that the user would like
+ *  to play from. Please keep in mind that only one (1) tee box is
+ *  implemented for each course at this time. We believe that this
+ *  problem exist because of a wrong setup with the database.
+ */
 void track::on_confirmTeeBox_clicked()
 {
     QString teeSelected;
@@ -94,9 +107,15 @@ void track::on_confirmTeeBox_clicked()
     /*!
      * \brief query
      *  This query will execute which set of tees to play on from the previous
-     *  selection. Please note that only Plum Tree National Golf Club has all
-     *  set of tees entered into the golfapp.db. The other two courses will only
-     *  have the most up
+     *  selection. Please note that all preloaded golf courses only have one set
+     *  of tees. The tees preloaded for the selected golf course is the most difficult
+     *  set of tee for that course. While Bridge of Poplar Creek has 7 sets of tees,
+     *  Oak Grove Golf Course has 6 sets of tees and Plum Tree National Golf Club
+     *  has 4 sets of tees, in actually each golf course has only one inputted into
+     *  the golfapp.db. The below section of code is commmented out because with only
+     *  having one set of tees for each golf course, this drop menu is basically irrelevent.
+     *  The moment the entries for each set of tees for all preloaded golf course are entered,
+     *  this section of code becomes relevent.
      */
    /*QSqlQuery query("select * from CourseInfo");
     while(query.next())
@@ -115,6 +134,12 @@ void track::on_confirmTeeBox_clicked()
     }
 }
 
+/*!
+ * \brief track::on_StartRound_clicked
+ *  This slot will open a new window that inherits the hole.cpp. From there will
+ *  display information starting from the previous locations that the user selected
+ *  in the three (3) drop menus.
+ */
 void track::on_StartRound_clicked()
 {
     QString holeSelected;
@@ -123,13 +148,10 @@ void track::on_StartRound_clicked()
     StartingHole = holeSelected.toInt();
     qDebug() << StartingHole << endl;
 
-    QSqlQuery query ("select * from CourseInfo");
-    while(query.next()) {
-        QWidget *hole_window = new hole();
-        hole_window->show();
-        // This will disappread the mainwindow
-        hide();
-    }
+    QWidget *hole_window = new hole();
+    hole_window->show();
+    // This will disappread the mainwindow
+    hide();
 }
 
 /*!

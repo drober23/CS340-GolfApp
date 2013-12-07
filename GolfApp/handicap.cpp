@@ -4,6 +4,14 @@
 #include "database.h"
 extern int UserID;
 
+/*!
+ * \brief handicap::handicap
+ * \param parent
+ *  The handicap window will show the current handicap index for each profile. Unfortunately,
+ *  we were not able to record new scores with our stat-tracking feature and show the handicap
+ *  history of each profile. If records indeed were entered the database, the code down below
+ *  would be able to handle previous handicap indexes.
+ */
 handicap::handicap(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::handicap)
