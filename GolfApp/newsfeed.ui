@@ -23,6 +23,9 @@
       <height>50</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
+    </property>
     <property name="text">
      <string>PGA Tour</string>
     </property>
@@ -36,6 +39,9 @@
       <height>50</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
+    </property>
     <property name="text">
      <string>LPGA Tour</string>
     </property>
@@ -48,6 +54,9 @@
       <width>115</width>
       <height>50</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
     </property>
     <property name="text">
      <string>ESPN</string>
@@ -76,6 +85,9 @@
       <width>150</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
     </property>
     <property name="text">
      <string>Back</string>

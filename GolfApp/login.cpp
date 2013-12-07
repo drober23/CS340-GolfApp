@@ -50,7 +50,8 @@ void login::on_loginButton_clicked()
 {
     /*!
      * \brief db
-     *  Opening database to allow access for current user
+     *  Opening database to allow access for current user.
+     *  PLEASE READ
      */
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("/Users/got_romo/Desktop/golfapp.db");
@@ -78,12 +79,12 @@ void login::on_loginButton_clicked()
          * username and corresponding password here
          */
 
-        UserID = query.value(0).toInt();
-        qDebug() << query.value(0).toInt();
-        sql2 = query.value(1).toString();
-        qDebug() << query.value(1).toString();
-        sql3 = query.value(2).toString();
+        UserID = query.value(1).toInt();
+        qDebug() << query.value(1).toInt();
+        sql2 = query.value(2).toString();
         qDebug() << query.value(2).toString();
+        sql3 = query.value(3).toString();
+        qDebug() << query.value(3).toString();
 
         if( username == sql2) {
             if( password == sql3){

@@ -1,6 +1,7 @@
 #include "hole.h"
 #include "ui_hole.h"
 #include "mainwindow.h"
+#include "database.h"
 
 hole::hole(QWidget *parent) :
     QMainWindow(parent),

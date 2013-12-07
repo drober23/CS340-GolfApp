@@ -23,6 +23,9 @@
       <height>25</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
+    </property>
     <property name="text">
      <string>Back</string>
     </property>
@@ -36,6 +39,9 @@
       <height>25</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
+    </property>
     <property name="text">
      <string>Search</string>
     </property>
@@ -45,9 +51,12 @@
      <rect>
       <x>25</x>
       <y>50</y>
-      <width>75</width>
+      <width>100</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
     </property>
     <property name="text">
      <string>First Name</string>
@@ -58,9 +67,12 @@
      <rect>
       <x>25</x>
       <y>100</y>
-      <width>75</width>
+      <width>100</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
     </property>
     <property name="text">
      <string>Last Name</string>

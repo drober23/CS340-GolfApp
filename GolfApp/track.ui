@@ -43,6 +43,9 @@
       <height>25</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
+    </property>
     <property name="text">
      <string>Next</string>
     </property>
@@ -55,6 +58,9 @@
       <width>150</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
     </property>
     <property name="text">
      <string>Next</string>
@@ -79,6 +85,9 @@
       <height>25</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
+    </property>
     <property name="text">
      <string>Start Round</string>
     </property>
@@ -91,6 +100,9 @@
       <width>150</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
     </property>
     <property name="text">
      <string>Back</string>

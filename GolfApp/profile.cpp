@@ -21,7 +21,7 @@ profile::profile(QWidget *parent) :
 
     QSqlQuery query("select * from Profile");
     while(query.next()) {
-        int userMatch = query.value(0).toInt();
+        int userMatch = query.value(1).toInt();
         //qDebug() << query.value(0).toInt();
 
 
@@ -29,27 +29,27 @@ profile::profile(QWidget *parent) :
             // Filling in Profile Information
             QLabel *profile_label = new QLabel("Profile:");
             ui->gridLayout->addWidget(profile_label,0,0);
-            QLabel *profile_name = new QLabel(query.value(3).toString());
+            QLabel *profile_name = new QLabel(query.value(4).toString());
             ui->gridLayout->addWidget(profile_name,0,1);
 
             QLabel *email_label = new QLabel("Email:");
             ui->gridLayout->addWidget(email_label,1,0);
-            QLabel *email = new QLabel(query.value(7).toString());
+            QLabel *email = new QLabel(query.value(8).toString());
             ui->gridLayout->addWidget(email,1,1);
 
             QLabel *address_label = new QLabel("Address:");
             ui->gridLayout->addWidget(address_label,2,0);
-            QLabel *address = new QLabel(query.value(4).toString());
+            QLabel *address = new QLabel(query.value(5).toString());
             ui->gridLayout->addWidget(address,2,1);
 
             QLabel *handicap_label = new QLabel("Handicap:");
             ui->gridLayout->addWidget(handicap_label,3,0);
-            QLabel *handicap = new QLabel(query.value(8).toString());
+            QLabel *handicap = new QLabel(query.value(9).toString());
             ui->gridLayout->addWidget(handicap,3,1);
 
             QLabel *membership_label = new QLabel("Membership Status:");
             ui->gridLayout->addWidget(membership_label,4,0);
-            QLabel *membership = new QLabel("");
+            QLabel *membership = new QLabel(query.value(0).toString());
             ui->gridLayout->addWidget(membership,4,1);
         }
     }
