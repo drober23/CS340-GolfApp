@@ -10,6 +10,7 @@ class login;
 class login : public QMainWindow
 {
     Q_OBJECT
+
 public:
     explicit login(QWidget *parent = 0);
     ~login();

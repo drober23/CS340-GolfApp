@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>GolfApp</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/new/prefix1/LOGO.jpg);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWebView" name="webView">
     <property name="geometry">
@@ -39,7 +42,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
+     <string notr="true">color: rgb(0, 0, 255);
+font: 10pt &quot;Comic Sans MS&quot;;</string>
     </property>
     <property name="text">
      <string>Back</string>
@@ -52,7 +56,7 @@
      <x>0</x>
      <y>0</y>
      <width>350</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
