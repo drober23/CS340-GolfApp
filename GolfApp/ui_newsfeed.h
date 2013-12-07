@@ -1,0 +1,101 @@
+/********************************************************************************
+** Form generated from reading UI file 'newsfeed.ui'
+**
+** Created by: Qt User Interface Compiler version 5.1.1
+**
+** WARNING! All changes made in this file will be lost when recompiling UI file!
+********************************************************************************/
+
+#ifndef UI_NEWSFEED_H
+#define UI_NEWSFEED_H
+
+#include <QtCore/QVariant>
+#include <QtWebKitWidgets/QWebView>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QStatusBar>
+#include <QtWidgets/QWidget>
+
+QT_BEGIN_NAMESPACE
+
+class Ui_newsfeed
+{
+public:
+    QWidget *centralwidget;
+    QPushButton *PGATour;
+    QPushButton *LPGATour;
+    QPushButton *ESPN;
+    QWebView *webView;
+    QPushButton *backButton;
+    QMenuBar *menubar;
+    QStatusBar *statusbar;
+
+    void setupUi(QMainWindow *newsfeed)
+    {
+        if (newsfeed->objectName().isEmpty())
+            newsfeed->setObjectName(QStringLiteral("newsfeed"));
+        newsfeed->resize(350, 450);
+        newsfeed->setStyleSheet(QStringLiteral("background-image: url(:/new/prefix1/LOGO.jpg);"));
+        centralwidget = new QWidget(newsfeed);
+        centralwidget->setObjectName(QStringLiteral("centralwidget"));
+        PGATour = new QPushButton(centralwidget);
+        PGATour->setObjectName(QStringLiteral("PGATour"));
+        PGATour->setGeometry(QRect(0, 0, 115, 50));
+        PGATour->setStyleSheet(QLatin1String("color: rgb(0, 0, 255);\n"
+"font: 10pt \"Comic Sans MS\";"));
+        LPGATour = new QPushButton(centralwidget);
+        LPGATour->setObjectName(QStringLiteral("LPGATour"));
+        LPGATour->setGeometry(QRect(115, 0, 115, 50));
+        LPGATour->setStyleSheet(QLatin1String("color: rgb(0, 0, 255);\n"
+"font: 10pt \"Comic Sans MS\";"));
+        ESPN = new QPushButton(centralwidget);
+        ESPN->setObjectName(QStringLiteral("ESPN"));
+        ESPN->setGeometry(QRect(230, 0, 115, 50));
+        ESPN->setStyleSheet(QLatin1String("color: rgb(0, 0, 255);\n"
+"font: 10pt \"Comic Sans MS\";"));
+        webView = new QWebView(centralwidget);
+        webView->setObjectName(QStringLiteral("webView"));
+        webView->setGeometry(QRect(0, 50, 350, 350));
+        webView->setUrl(QUrl(QStringLiteral("about:blank")));
+        backButton = new QPushButton(centralwidget);
+        backButton->setObjectName(QStringLiteral("backButton"));
+        backButton->setGeometry(QRect(100, 400, 150, 25));
+        backButton->setStyleSheet(QLatin1String("color: rgb(0, 0, 255);\n"
+"font: 10pt \"Comic Sans MS\";"));
+        newsfeed->setCentralWidget(centralwidget);
+        menubar = new QMenuBar(newsfeed);
+        menubar->setObjectName(QStringLiteral("menubar"));
+        menubar->setGeometry(QRect(0, 0, 350, 21));
+        newsfeed->setMenuBar(menubar);
+        statusbar = new QStatusBar(newsfeed);
+        statusbar->setObjectName(QStringLiteral("statusbar"));
+        newsfeed->setStatusBar(statusbar);
+
+        retranslateUi(newsfeed);
+
+        QMetaObject::connectSlotsByName(newsfeed);
+    } // setupUi
+
+    void retranslateUi(QMainWindow *newsfeed)
+    {
+        newsfeed->setWindowTitle(QApplication::translate("newsfeed", "GolfApp", 0));
+        PGATour->setText(QApplication::translate("newsfeed", "PGA Tour", 0));
+        LPGATour->setText(QApplication::translate("newsfeed", "LPGA Tour", 0));
+        ESPN->setText(QApplication::translate("newsfeed", "ESPN", 0));
+        backButton->setText(QApplication::translate("newsfeed", "Back", 0));
+    } // retranslateUi
+
+};
+
+namespace Ui {
+    class newsfeed: public Ui_newsfeed {};
+} // namespace Ui
+
+QT_END_NAMESPACE
+
+#endif // UI_NEWSFEED_H
