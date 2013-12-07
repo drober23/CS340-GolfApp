@@ -1,15 +1,9 @@
 #include "handicap.h"
 #include "ui_handicap.h"
 #include "mainwindow.h"
+#include "database.h"
+extern int UserID;
 
-/*!
- * \brief handicap::handicap
- * \param parent
- *  The handicap window will show the current handicap index for each profile. Unfortunately,
- *  we were not able to record new scores with our stat-tracking feature and show the handicap
- *  history of each profile. If records indeed were entered the database, the code down below
- *  would be able to handle previous handicap indexes.
- */
 handicap::handicap(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::handicap)
@@ -22,27 +16,36 @@ handicap::handicap(QWidget *parent) :
     this->setFixedHeight(height);
     this->setWindowTitle("ALL ABOUT GOLF");
 
-    QLabel *current_handicap_label = new QLabel("Handicap");
-    ui->gridLayout->addWidget(current_handicap_label,0,0);
-    QLabel *current_handicap = new QLabel("#XX");
-    ui->gridLayout->addWidget(current_handicap,0,1);
+    QSqlQuery query("select * from Profile");
+    while(query.next()) {
+        int userMatch = query.value(1).toInt();
+        //qDebug() << query.value(0).toInt();
 
-    QLabel *handicap_history_label = new QLabel("Handicap History");
-    ui->gridLayout->addWidget(handicap_history_label,1,0);
-    QLabel *handicap_history = new QLabel("#XX");
-    ui->gridLayout->addWidget(handicap_history,1,1);
+        if( UserID == userMatch) {
+            // Filling in Handicap Information starting from most recent handicap index
+            QLabel *current_handicap_label = new QLabel("Handicap");
+            ui->gridLayout->addWidget(current_handicap_label,0,0);
+            QLabel *current_handicap = new QLabel(query.value(9).toString());
+            ui->gridLayout->addWidget(current_handicap,0,1);
 
-    QLabel *handicap_history_2 = new QLabel("#XX");
-    ui->gridLayout->addWidget(handicap_history_2,2,1);
+            QLabel *handicap_history_label = new QLabel("Handicap History");
+            ui->gridLayout->addWidget(handicap_history_label,1,0);
+            QLabel *handicap_history = new QLabel(query.value(9).toString());
+            ui->gridLayout->addWidget(handicap_history,1,1);
 
-    QLabel *handicap_history_3 = new QLabel("#XX");
-    ui->gridLayout->addWidget(handicap_history_3,3,1);
+            QLabel *handicap_history_2 = new QLabel(query.value(9).toString());
+            ui->gridLayout->addWidget(handicap_history_2,2,1);
 
-    QLabel *handicap_history_4 = new QLabel("#XX");
-    ui->gridLayout->addWidget(handicap_history_4,4,1);
+            QLabel *handicap_history_3 = new QLabel(query.value(9).toString());
+            ui->gridLayout->addWidget(handicap_history_3,3,1);
 
-    QLabel *handicap_history_5 = new QLabel("#XX");
-    ui->gridLayout->addWidget(handicap_history_5,5,1);
+            QLabel *handicap_history_4 = new QLabel(query.value(9).toString());
+            ui->gridLayout->addWidget(handicap_history_4,4,1);
+
+            QLabel *handicap_history_5 = new QLabel(query.value(9).toString());
+            ui->gridLayout->addWidget(handicap_history_5,5,1);
+        }
+    }
 }
 
 handicap::~handicap()

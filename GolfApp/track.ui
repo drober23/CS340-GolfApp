@@ -13,9 +13,6 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-image: url(:/new/prefix1/LOGO.jpg);</string>
-  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QComboBox" name="courseBox">
     <property name="geometry">
@@ -47,8 +44,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 255);
-font: 10pt &quot;Comic Sans MS&quot;;</string>
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
     </property>
     <property name="text">
      <string>Next</string>
@@ -64,8 +60,7 @@ font: 10pt &quot;Comic Sans MS&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 255);
-font: 10pt &quot;Comic Sans MS&quot;;</string>
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
     </property>
     <property name="text">
      <string>Next</string>
@@ -91,8 +86,7 @@ font: 10pt &quot;Comic Sans MS&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 255);
-font: 10pt &quot;Comic Sans MS&quot;;</string>
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
     </property>
     <property name="text">
      <string>Start Round</string>
@@ -108,8 +102,7 @@ font: 10pt &quot;Comic Sans MS&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 255);
-font: 10pt &quot;Comic Sans MS&quot;;</string>
+     <string notr="true">font: 15pt &quot;Comic Sans MS&quot;;</string>
     </property>
     <property name="text">
      <string>Back</string>
@@ -122,7 +115,7 @@ font: 10pt &quot;Comic Sans MS&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>350</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

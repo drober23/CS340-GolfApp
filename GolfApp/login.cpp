@@ -2,6 +2,7 @@
 #include "ui_login.h"
 #include "mainwindow.h"
 #include "database.h"
+int UserID;
 
 /*!
  * \brief login::login
@@ -29,15 +30,6 @@ login::login(QWidget *parent) :
     this->setFixedWidth(width);
     this->setFixedHeight(height);
     this->setWindowTitle("ALL ABOUT GOLF");
-
-    /*!
-     * \brief db
-     *  Opening database to allow access for current user
-     */
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("/Users/got_romo/Desktop/test.db");
-    bool ok = db.open();
-    qDebug() << ok << "" << db.tables() << endl;
 }
 
 login::~login()
@@ -56,19 +48,29 @@ login::~login()
  */
 void login::on_loginButton_clicked()
 {
-    QTextStream cin(stdin);
-    QTextStream cout(stdout);
+    /*!
+     * \brief db
+     *  Opening database to allow access for current user.
+     *  PLEASE READ
+     */
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("/Users/got_romo/Desktop/golfapp.db");
+    bool ok = db.open();
+    qDebug() << ok << "" << db.tables() << endl;
+
     QString username;
     QString password;
-    QString sql;
+    //QString sql1;
+    QString sql2;
+    QString sql3;
 
     /*! Query to search app's members in database
      *  for displaying certain profile information
      */
     username = ui->usernameLine->text();
-    cout << username << endl;
+    qDebug() << username << endl;
     password = ui->passwordLine->text();
-    cout << password << endl;
+    qDebug() << password << endl;
 
     // If user has access with corresponding password
     QSqlQuery query ("select * from Profile");
@@ -77,13 +79,29 @@ void login::on_loginButton_clicked()
          * username and corresponding password here
          */
 
-        sql = query.value(0).toString();
-        qDebug() << query.value(0).toString();
+        UserID = query.value(1).toInt();
+        qDebug() << query.value(1).toInt();
+        sql2 = query.value(2).toString();
+        qDebug() << query.value(2).toString();
+        sql3 = query.value(3).toString();
+        qDebug() << query.value(3).toString();
 
-        //QWidget *mainwindow = new MainWindow();
-        //mainwindow->show();
-        // This will disappread the mainwindow
-        //this->isHidden();
+        if( username == sql2) {
+            if( password == sql3){
+                QWidget *mainwindow = new MainWindow();
+                mainwindow->show();
+                // This will disappread the mainwindow
+                this->isHidden();
+                //cout << "bingo" << endl;
+                break;
+            }
+            // Error message
+            else
+                ui->errorLabel->setText("Please Try Again");
+        }
+        // Error message
+        else
+            ui->errorLabel->setText("Please Try Again");
     }
 }
 

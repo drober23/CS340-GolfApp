@@ -14,9 +14,6 @@
    <string>GolfApp</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <property name="styleSheet">
-    <string notr="true">background-image: url(:/new/prefix1/LOGO.jpg);</string>
-   </property>
    <widget class="QPushButton" name="backButton">
     <property name="geometry">
      <rect>
@@ -25,10 +22,6 @@
       <width>150</width>
       <height>25</height>
      </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 255);
-font: 10pt &quot;Comic Sans MS&quot;;</string>
     </property>
     <property name="text">
      <string>Back</string>
@@ -52,7 +45,7 @@ font: 10pt &quot;Comic Sans MS&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>350</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
