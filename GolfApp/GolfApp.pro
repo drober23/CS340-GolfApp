@@ -9,6 +9,7 @@
 QT       += core gui
 QT       += webkitwidgets
 QT       += sql
+unix:LIBS += -lpq
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -48,3 +49,9 @@ FORMS    += mainwindow.ui \
     hole.ui \
     login.ui \
     social.ui
+
+OTHER_FILES += \
+    ../ACDB/golfapp.accdb
+
+RESOURCES += \
+    logo.qrc

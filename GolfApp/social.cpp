@@ -1,6 +1,7 @@
 #include "social.h"
 #include "ui_social.h"
 #include "mainwindow.h"
+<<<<<<< HEAD
 #include "database.h"
 #include <cstring>
 
@@ -13,6 +14,9 @@
  *  somehow being misused but ideally again we would like the executed query to be able
  *  to return true when a member the user is looking for is currently in the database.
  */
+=======
+
+>>>>>>> fab21b1f8de329e2fa927e82805ee2e1beac1235
 social::social(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::social)
@@ -36,17 +40,18 @@ social::~social()
  */
 void social::on_SearchButton_clicked()
 {
+    QTextStream cin(stdin);
+    QTextStream cout(stdout);
     QString firstName;
     QString lastName;
-    QString fullName;
-    QString sql;
 
     /*! Query to search app's members in database
      *  for displaying certain profile information
      */
     firstName = ui->FirstNameSearch->text();
-    qDebug() << firstName << endl;
+    cout << firstName << endl;
     lastName = ui->LastNameSearch->text();
+<<<<<<< HEAD
     qDebug() << lastName << endl;
     fullName = firstName + " " + lastName;
     qDebug() << fullName << " " << fullName.size() << endl;
@@ -69,6 +74,9 @@ void social::on_SearchButton_clicked()
     }
     // Error message
     ui->SearchBrowser->setText("No Records Found");
+=======
+    cout << lastName << endl;
+>>>>>>> fab21b1f8de329e2fa927e82805ee2e1beac1235
 }
 
 /*!

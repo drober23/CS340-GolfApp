@@ -1,9 +1,12 @@
 #include "hole.h"
 #include "ui_hole.h"
 #include "mainwindow.h"
+<<<<<<< HEAD
 #include "database.h"
 extern int CourseID;
 extern int StartingHole;
+=======
+>>>>>>> fab21b1f8de329e2fa927e82805ee2e1beac1235
 
 /*!
  * \brief hole::hole
